@@ -29,5 +29,5 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # QCOM standard decryption
 PRODUCT_PACKAGES += \
-    qcom_decrypt
+    qcom_decrypt \
 
