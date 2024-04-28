@@ -78,6 +78,10 @@ TW_DEFAULT_BRIGHTNESS := 2048
 TW_THEME := portrait_hdpi
 TW_USE_FSCRYPT_POLICY := 1
 
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
 
