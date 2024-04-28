@@ -27,3 +27,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 
+# QCOM standard decryption
+PRODUCT_PACKAGES += \
+    qcom_decrypt
+
+# tzdata
+PRODUCT_PACKAGES += \
+    tzdata_twrp
