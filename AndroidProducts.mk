@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_ysl.mk
+	$(LOCAL_DIR)/twrp_ysl.mk

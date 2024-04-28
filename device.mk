@@ -31,9 +31,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     qcom_decrypt
 
-# tzdata
-PRODUCT_PACKAGES += \
-    tzdata_twrp
 
 # Apex libraries
 PRODUCT_HOST_PACKAGES += \

@@ -24,7 +24,7 @@ TARGET_BOOTLOADER_BOARD_NAME := ysl
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive androidboot.usbconfigfs=false audit=0
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive androidboot.usbconfigfs=true loop.max_part=7 audit=0
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -38,11 +38,11 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/ysl
 TARGET_BOARD_PLATFORM := msm8953
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
 TARGET_BOARD_SUFFIX := _64
+QCOM_BOARD_PLATFORMS += $(TARGET_BOARD_PLATFORM)
 
 # Encryption
-PLATFORM_VERSION := 20.1.0
-PLATFORM_SECURITY_PATCH := 2099-12-31
-VENDOR_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 127
+PLATFORM_SECURITY_PATCH := 2127-12-31
 BOARD_USES_QCOM_DECRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TARGET_HW_DISK_ENCRYPTION := true
@@ -83,7 +83,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_DEVICE_MODULES += \
     libcap \
 	libdrm \
-    libhardware_legacy \
     libicui18n \
     libion \
     libicuuc \
@@ -94,7 +93,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
 	$(TARGET_OUT_SHARED_LIBRARIES)/libdrm.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libhardware_legacy.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
