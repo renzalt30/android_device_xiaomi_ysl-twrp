@@ -45,6 +45,7 @@ PLATFORM_VERSION := 127
 PLATFORM_SECURITY_PATCH := 2127-12-31
 BOARD_USES_QCOM_DECRYPTION := true
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -87,6 +88,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     libcap \
+	libcryptfs_hw \
 	libdrm \
     libicui18n \
     libion \
@@ -106,5 +108,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libprocinfo.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+	$(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libcryptfs_hw.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.qti.hardware.cryptfshw@1.0.so
