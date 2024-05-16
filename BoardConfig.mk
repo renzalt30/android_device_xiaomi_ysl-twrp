@@ -75,7 +75,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP Configuration
-TW_DEVICE_VERSION := Redmi S2 | Shiinaeru
+TW_DEVICE_VERSION := Redmi S2 | RenzAlt
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
