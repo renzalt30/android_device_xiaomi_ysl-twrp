@@ -35,9 +35,7 @@ TW_INCLUDE_CRYPTO := true
 # Encryption
 PLATFORM_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
-BOARD_USES_QCOM_DECRYPTION := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-TARGET_HW_DISK_ENCRYPTION := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive androidboot.usbconfigfs=true loop.max_part=7 audit=0
