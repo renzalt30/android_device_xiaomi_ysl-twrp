@@ -30,7 +30,6 @@ TARGET_NO_BOOTLOADER := true
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Crypto
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 TW_INCLUDE_CRYPTO := true
 
 # Encryption
@@ -103,7 +102,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libcryptfs_hw \
     libdrm \
     libion \
     libkeymaster3device \
@@ -114,10 +112,8 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdrm.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster3device.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libcryptfs_hw.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.qti.hardware.cryptfshw@1.0.so
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so 
 
 # env
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
